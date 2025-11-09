@@ -3,13 +3,13 @@ package head_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/head"
 )
 
 func ExampleHead_basic() {
 	// echo "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12" | head
-	yup.MustRun(
+	gloo.MustRun(
 		Head(strings.NewReader("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12")),
 	)
 	// Output:
@@ -24,4 +24,3 @@ func ExampleHead_basic() {
 	// 9
 	// 10
 }
-
